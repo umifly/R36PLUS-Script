@@ -17,6 +17,7 @@ export TERM=linux
 setfont /usr/share/consolefonts/Lat7-Terminus16.psf.gz
 printf "\033c" > "$CURR_TTY"
 printf "GPU Freq Manager\nPlease wait..." > "$CURR_TTY"
+printf "\n\nScript by @umifly" > "$CURR_TTY"
 sleep 1
 
 # --- Functions ---
@@ -71,7 +72,7 @@ MainMenu() {
         STATUS=$(get_gpu_status)
         local CHOICE
         CHOICE=$(dialog --output-fd 1 \
-            --backtitle "GPU Freq Manager - R36PLUS" \
+            --backtitle "GPU Freq Manager - R36PLUS Script by @umifly" \
             --title "GPU Freq Manager" \
             --menu "Current GPU Status:\n$STATUS" 20 60 10 \
             1 "Choose Max Freq" \
